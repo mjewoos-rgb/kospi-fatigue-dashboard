@@ -18,8 +18,8 @@ const MOCK_DATA = [
 
 function calcFatigue(individual, foreign) {
   // Base score 100
-  // Individual net buy < 15000억 → defensive demand weakening
-  // Foreign net sell > 15000억 → selling pressure
+  // Individual net buy < 15000억 defensive demand weakening
+  // Foreign net sell > 15000억 selling pressure
   // Combined signal
   let score = 100;
   const indivPenalty = individual < 15000 ? Math.min(40, (15000 - individual) / 300) : 0;
